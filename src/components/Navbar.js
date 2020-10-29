@@ -37,6 +37,7 @@ const Wrapper = styled.nav`
     justify-content: center;
     background-color: #525e65;
     box-shadow: 0 7px 20px 0 rgba(0,0,0,0.2), 0 4px 10px 0 rgba(0,0,0,0.2);
+    z-index: 2;
 `;
 
 const Menu = styled.ul`

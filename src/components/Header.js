@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import me from '../assets/me.jpg';
 
 const typing = keyframes`
     from { width: 0 }
@@ -18,7 +19,7 @@ const Header = () => {
             <p>Full Stack Web Developer. I love building awesome projects and learning new things along the way.</p>
         </InfoWrapper>
         <ImgWrapper>
-            <img src="https://d2krks2etiea2r.cloudfront.net/wp-content/uploads/2018/03/26095802/user-placeholder.jpg" alt="photo" />
+            <img src={me} alt="photo" />
         </ImgWrapper>
     </Wrapper>
 };
@@ -29,7 +30,9 @@ const Wrapper = styled.div`
     padding: 16px;
     background-color: #525e65;
     color: #ddd;
-
+    position: relative;
+    flex-direction: column;
+    
     & h1 {
         overflow: hidden;
         border-right: .15em solid orange;
@@ -40,6 +43,10 @@ const Wrapper = styled.div`
             ${typing} 3s steps(40, end),
             ${blinkCaret} .75s step-end infinite;
     }
+
+    @media(min-width: 768px) {
+        flex-direction: row;
+    }
 `;
 
 const InfoWrapper = styled.div`
@@ -48,11 +55,33 @@ const InfoWrapper = styled.div`
     justify-content: center;
     text-align: left;
     padding: 0 16px;
-    max-width: 300px;
+
+    & h1 {
+        max-width: 300px;
+    }
+
+    @media(min-width: 768px) {
+        max-width: 300px;
+    }
 `;
 
 const ImgWrapper = styled.div`
+    display: flex;
     padding: 0 16px;
+    justify-content: center;
+
+    & img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 2px solid #ddd;
+    }
+
+    @media(min-width: 768px) {
+        max-width: 300px;
+    }
 `;
+
+
 
 export default Header;
