@@ -33,10 +33,9 @@ const SpanPill = styled.span`
         border: 2px solid #24292e;
     }
 
-    &:hover > span {
+    &:hover span {
         display: inline;
     }
-    z-index: 1;
 `;
 
 const ToolTip = styled.span`
@@ -50,7 +49,7 @@ const ToolTip = styled.span`
     left: 0;
     font-size: 14px;
     display: none;
-    z-index: 99 !important;
+    z-index: 99;
 `;
 
 const Tip = styled.div`

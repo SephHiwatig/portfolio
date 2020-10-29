@@ -11,7 +11,7 @@ const About = () => {
             I often find myself getting lost in time when thinking about solving a problem and not stopping until it is solved.
             I really enjoy the process and the feeling of fulfillment after finding a solution to a certain problem. It was only a matter of time for me
             to come accross programming and Software Development. It was a complete love at first "Hello World!" and it just keeps getting better!
-                </p>
+            </p>
             <Button label="Read more"></Button>
         </InfoWrapper>
         <TechStack>
@@ -19,10 +19,10 @@ const About = () => {
             <TechWrapper>
                 <Pill title="JavaScript" mastery={99} />
                 <Pill title="C#" mastery={90} />
-                <Pill title="React" mastery={99} />
-                <Pill title="Angular" mastery={99} />
-                <Pill title="NodeJs" mastery={99} />
-                <Pill title="TypeScript" mastery={99} />
+                <Pill title="React" mastery={90} />
+                <Pill title="Angular" mastery={90} />
+                <Pill title="NodeJs" mastery={90} />
+                <Pill title="TypeScript" mastery={90} />
                 <Pill title="SQL" mastery={90} />
                 <Pill title="MongoDb" mastery={85} />
                 <Pill title="Java" mastery={40} />
@@ -58,14 +58,13 @@ const InfoWrapper = styled.div`
     padding: 0 16px 0;
 
     @media(min-width: 768px) {
-            border - right: 2px solid #525e65;
+            border-right: 2px solid #525e65;
     }
 `;
 
 const TechStack = styled.div`
     padding: 0 16px 0;
     flex: 3;
-    margin-top: 16px;
 
     @media(min-width: 768px) {
             margin - top: 0;
