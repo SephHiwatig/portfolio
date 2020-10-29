@@ -4,17 +4,18 @@ import Button from './extras/Button';
 
 const About = () => {
     return <Wrapper>
-        <Title>About me</Title>
-        <Body>
-            <InfoWrapper>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp; Ever since I was a kid, I have always been fond of puzzles and brain teasers.
-                I often find myself getting lost in time when thinking about solving a problem and not stopping until it is solved.
-                I really enjoy the process and the feeling of fulfillment after finding a solution to a certain problem. It was only a matter of time for me
-                to come accross programming and Software Development. It was a complete love at first "Hello World!" and it just keeps getting better!
+        <InfoWrapper>
+            <Title>About me</Title>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; Ever since I was a kid, I have always been fond of puzzles and brain teasers.
+            I often find myself getting lost in time when thinking about solving a problem and not stopping until it is solved.
+            I really enjoy the process and the feeling of fulfillment after finding a solution to a certain problem. It was only a matter of time for me
+            to come accross programming and Software Development. It was a complete love at first "Hello World!" and it just keeps getting better!
                 </p>
-                <Button label="Read more"></Button>
-            </InfoWrapper>
-            <TechStack>
+            <Button label="Read more"></Button>
+        </InfoWrapper>
+        <TechStack>
+            <Title>Skills</Title>
+            <TechWrapper>
                 <Tech>JavaScript</Tech>
                 <Tech>C#</Tech>
                 <Tech>Java</Tech>
@@ -25,17 +26,20 @@ const About = () => {
                 <Tech>TypeScript</Tech>
                 <Tech>SQL</Tech>
                 <Tech>MongoDb</Tech>
-            </TechStack>
-        </Body>
+            </TechWrapper>
+        </TechStack>
     </Wrapper>
 };
 
 const Wrapper = styled.div`
     margin: 16px 2%;
     color: #525e65;
+    display: flex;
+    flex-direction: column;
 
     @media(min-width: 768px) {
         margin: 16px 15%;
+        flex-direction: row;
     }
 
     @media(min-width: 1200px) {
@@ -48,19 +52,26 @@ const Title = styled.h2`
     margin: 0;
 `;
 
-const Body = styled.div`
-    display: flex;
-`;
-
 const InfoWrapper = styled.div`
     flex: 7;
     padding: 0 16px 0;
-    border-right: 2px solid #525e65;
+
+    @media(min-width: 768px) {
+        border-right: 2px solid #525e65;
+    }
 `;
 
 const TechStack = styled.div`
     padding: 0 16px 0;
     flex: 3;
+    margin-top: 16px;
+
+    @media(min-width: 768px) {
+        margin-top: 0;
+    }
+`;
+
+const TechWrapper = styled.div`
     flex-wrap: wrap;
     display: flex;
     align-items: center;
