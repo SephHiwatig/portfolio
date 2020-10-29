@@ -7,9 +7,6 @@ const Navbar = () => {
     return <Wrapper>
         <Menu>
             <li>
-                <AnimatedLink href="#">Home</AnimatedLink>
-            </li>
-            <li>
                 <AnimatedLink href="#" >Projects</AnimatedLink>
             </li>
             <li>
@@ -34,27 +31,29 @@ const Navbar = () => {
 export default Navbar;
 
 const Wrapper = styled.nav`
-    padding: 8  px;
+    padding: 0 8px;
     display: flex;
     position: sticky;
     top: 0;
     align-items: center;
     justify-content: center;
+    background-color: #525e65;
+    box-shadow: 0 7px 20px 0 rgba(0,0,0,0.2), 0 4px 10px 0 rgba(0,0,0,0.2);
 `;
 
 const Menu = styled.ul`
     display: flex;
     list-style-type: none;
-    padding-left: 0;
+    padding: 0;
 
     & li {
-        margin: 0 24px 10px 24px;
+        margin: 0 24px 0px 24px;
     }
 `;
 
 const AnimatedLink = styled.a`
     display: inline-block;
-    color: #000;
+    color: #fff;
     text-decoration: none;
 
     &:after {
@@ -62,18 +61,16 @@ const AnimatedLink = styled.a`
         display: block;
         width: 0;
         height: 2px;
-        background: #fff;
         transition: width .3s;
     }
 
     &:hover::after {
         width: 100%;
-        background: #000;
+        background: #fff;
     }
 `;
 
 const IconsWrapper = styled.div`
-    padding: 16px;
     display: flex;
     align-items: center;
     font-size: 24px;
@@ -85,6 +82,11 @@ const IconsWrapper = styled.div`
 
 const IconLink = styled.a`
     display: inline-block;
-    color: #000;
+    color: #fff;
     text-decoration: none;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: transform .2s;
+    }
 `;
