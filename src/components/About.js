@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from './extras/Button';
+import Pill from './extras/Pill';
 
 const About = () => {
     return <Wrapper>
@@ -16,16 +17,16 @@ const About = () => {
         <TechStack>
             <Title>Skills</Title>
             <TechWrapper>
-                <Tech>JavaScript</Tech>
-                <Tech>C#</Tech>
-                <Tech>Java</Tech>
-                <Tech>Python</Tech>
-                <Tech>React</Tech>
-                <Tech>Angular</Tech>
-                <Tech>NodeJs</Tech>
-                <Tech>TypeScript</Tech>
-                <Tech>SQL</Tech>
-                <Tech>MongoDb</Tech>
+                <Pill title="JavaScript" mastery={99} />
+                <Pill title="C#" mastery={90} />
+                <Pill title="React" mastery={99} />
+                <Pill title="Angular" mastery={99} />
+                <Pill title="NodeJs" mastery={99} />
+                <Pill title="TypeScript" mastery={99} />
+                <Pill title="SQL" mastery={90} />
+                <Pill title="MongoDb" mastery={85} />
+                <Pill title="Java" mastery={40} />
+                <Pill title="Python" mastery={40} />
             </TechWrapper>
         </TechStack>
     </Wrapper>
@@ -38,12 +39,12 @@ const Wrapper = styled.div`
     flex-direction: column;
 
     @media(min-width: 768px) {
-        margin: 16px 15%;
+            margin: 16px 15%;
         flex-direction: row;
     }
 
     @media(min-width: 1200px) {
-        margin: 16px 25%;
+            margin: 16px 25%;
     }
 `;
 
@@ -57,7 +58,7 @@ const InfoWrapper = styled.div`
     padding: 0 16px 0;
 
     @media(min-width: 768px) {
-        border-right: 2px solid #525e65;
+            border - right: 2px solid #525e65;
     }
 `;
 
@@ -67,7 +68,7 @@ const TechStack = styled.div`
     margin-top: 16px;
 
     @media(min-width: 768px) {
-        margin-top: 0;
+            margin - top: 0;
     }
 `;
 
