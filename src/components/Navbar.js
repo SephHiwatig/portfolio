@@ -28,8 +28,6 @@ const Navbar = () => {
     </Wrapper>
 };
 
-export default Navbar;
-
 const Wrapper = styled.nav`
     padding: 0 8px;
     display: flex;
@@ -90,3 +88,5 @@ const IconLink = styled.a`
         transition: transform .2s;
     }
 `;
+
+export default Navbar;
