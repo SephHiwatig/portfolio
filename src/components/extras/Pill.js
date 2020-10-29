@@ -10,7 +10,11 @@ const Pill = ({ title, mastery }) => {
     }
     return <SpanPill>
         {title}
-        <ToolTip><Tip />Mastery&nbsp;{mastery + '%'} <Bar><div style={style}></div></Bar></ToolTip>
+        <ToolTip>
+            <Tip />
+            Mastery
+            <Bar><div style={style}></div></Bar>
+        </ToolTip>
     </SpanPill>;
 };
 
@@ -26,11 +30,12 @@ const SpanPill = styled.span`
     border: 2px solid transparent;
 
     &:hover {
-        transform: scale(1.05);
-        transition: transform .2s;
+        // transform: scale(1.05);
+        // transition: transform .2s;
         background-color: orange;
         color: #24292e;
         border: 2px solid #24292e;
+        transition: background-color .3s;
     }
 
     &:hover span {
@@ -49,7 +54,7 @@ const ToolTip = styled.span`
     left: 0;
     font-size: 14px;
     display: none;
-    z-index: 99;
+    z-index: 99 !important;
 `;
 
 const Tip = styled.div`
@@ -64,7 +69,7 @@ const Tip = styled.div`
 const Bar = styled.div`
     height: 14px;
     width: 150px;
-    border: 2px solid #000;
+    border: 2px solid rgba(80, 80, 80);
     border-radius: 8px;
 `;
 
