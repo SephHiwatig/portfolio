@@ -27,8 +27,9 @@ const Projects = () => {
 
     const ticketStack = ["Angular", ".NET Core", "Entity Framework", "MySql", "OOP Design Patterns"];
     const ticketDescription = `Bug tracking software for a team of developers.`;
-    const ticketrDifficulties = ["Multiple forms for manipulating a ticket", "Database data integrity"];
+    const ticketrDifficulties = ["Multiple forms for manipulating a ticket", "Data Access Layer" ,"Database Versions/Migrations", "Database data integrity"];
     const ticketSolutions = ["I used Angular's reactive forms to validate each complicated form of a ticket.",
+        "I used Entity Framework Code First approach to manage my Data Access layer and keep track of database migrations.",
         "To keep the data consistent, I applied a combination of Unit of Work and Repository Design Patterns on my Data Access Layer.", 
         "I also used Decorator design pattern to add paging properties on .NET Core's List class. This helps me page the tickets on the Front-end."];
     const ticketGitHub = "https://github.com/SephHiwatig/TicketingSystem";
