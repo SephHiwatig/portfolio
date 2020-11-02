@@ -78,7 +78,7 @@ const Content = styled.div`
     }
 
     @media(min-width: 1200px) {
-        margin: 16px 25%;
+        margin: 16px 15%;
     }
 `;
 
