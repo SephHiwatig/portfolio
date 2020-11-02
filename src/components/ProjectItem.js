@@ -3,7 +3,10 @@ import styled from 'styled-components';
 import Button from './extras/Button';
 import Pill from './extras/Pill';
 
-const ProjectItem = ({imgSource, stack, difficulties, solutions, title}) => {
+const ProjectItem = ({imgSource, stack, difficulties, solutions, title, description}) => {
+    const border = {
+        borderTop: "1px solid #aaa"
+    }
     return <Wrapper>
         <Row>
             <ImageWrapper>
@@ -12,33 +15,31 @@ const ProjectItem = ({imgSource, stack, difficulties, solutions, title}) => {
             <InfoWrapper>
                 <ProjectTitle>{title}</ProjectTitle>
                 <TechWrapper>
-                    <Pill title="JavaScript" mastery={99} />
-                    <Pill title="C#" mastery={90} />
-                    <Pill title="React" mastery={90} />
-                    <Pill title="Angular" mastery={90} />
-                    <Pill title="NodeJs" mastery={90} />
-                    <Pill title="TypeScript" mastery={90} />
+                    {stack.map(item => {
+                        return <Pill title={item} key={item} />
+                    })}
                 </TechWrapper>
+                <Description>
+                <p>{description}</p>
+                </Description>
                 <InfoFooter><Button label="View Project"/><Button label="Github"/></InfoFooter>
             </InfoWrapper>
         </Row>
-        <Row>
+        <Row style={border}>
             <Difficulties>
                 Difficulties
                 <CustomList>
-                    <li>Reason 1</li>
-                    <li>Reason 2</li>
-                    <li>Reason 4</li>
-                    <li>Reason 5</li>
+                    {difficulties.map(item => {
+                        return <li key={item}>{item}</li>
+                    })}
                 </CustomList>
             </Difficulties>
             <Solutions>
                 Solutions
                 <CustomList>
-                    <li>Solution 1</li>
-                    <li>Solution 2</li>
-                    <li>Solution 4</li>
-                    <li>Solution 5</li>
+                    {solutions.map(item => {
+                        return <li key={item}>{item}</li>
+                    })}
                 </CustomList>
             </Solutions>
         </Row>
@@ -60,6 +61,7 @@ const Wrapper = styled.div`
 const Row = styled.div`
     display: Flex;
     flex-direction: column;
+    margin-bottom: 16px;
 
     @media(min-width: 768px) {
         flex-direction: row;
@@ -69,6 +71,11 @@ const Row = styled.div`
 const ImageWrapper = styled.div`
     justify-content: center;
     display: flex;
+    margin-bottom: 16px;
+
+    @media(min-width: 768px) {
+        margin-bottom: 0;
+    }
 `;
 
 const InfoWrapper = styled.div`
@@ -89,7 +96,11 @@ const TechWrapper = styled.div`
     flex-wrap: wrap;
     display: flex;
     align-items: flex-start;
+`;
+
+const Description = styled.div`
     flex: 1;
+    margin: 0 0 0 8px;
 `;
 
 const ProjectTitle = styled.h3`
