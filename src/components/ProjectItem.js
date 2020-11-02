@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Button from './extras/Button';
 import Pill from './extras/Pill';
 
-const ProjectItem = ({imgSource, stack, difficulties, solutions, title, description}) => {
+const ProjectItem = ({imgSource, stack, difficulties, solutions, title, description, gitHub}) => {
     const border = {
         borderTop: "1px solid #aaa"
     }
@@ -22,12 +22,12 @@ const ProjectItem = ({imgSource, stack, difficulties, solutions, title, descript
                 <Description>
                 <p>{description}</p>
                 </Description>
-                <InfoFooter><Button label="View Project"/><Button label="Github"/></InfoFooter>
+                <InfoFooter><Button label="View Project"/><Button label="Github" click={() => { console.log(gitHub); window.open(gitHub) }}/></InfoFooter>
             </InfoWrapper>
         </Row>
         <Row style={border}>
             <Difficulties>
-                Difficulties
+                <ListTitle>Difficulties</ListTitle>
                 <CustomList>
                     {difficulties.map(item => {
                         return <li key={item}>{item}</li>
@@ -35,7 +35,7 @@ const ProjectItem = ({imgSource, stack, difficulties, solutions, title, descript
                 </CustomList>
             </Difficulties>
             <Solutions>
-                Solutions
+            <ListTitle>Solutions</ListTitle>
                 <CustomList>
                     {solutions.map(item => {
                         return <li key={item}>{item}</li>
@@ -105,6 +105,7 @@ const Description = styled.div`
 
 const ProjectTitle = styled.h3`
     margin: 0 0 0 8px;
+    color: orange;
 `;
 
 const Difficulties = styled.div`
@@ -125,8 +126,19 @@ const ProjectImg = styled.img`
     box-shadow: 0 7px 20px 0 rgba(0,0,0,0.2), 0 4px 10px 0 rgba(0,0,0,0.2);
 `;
 
+const ListTitle = styled.h4`
+    margin: 0;
+`;
+
 const CustomList = styled.ul`
     margin-top: 0;
+    list-style: none;
+
+    & li::before {
+        content: "•"; color: orange;
+        display: inline-block; width: 1em;
+        margin-left: -1em
+    }
 `;
 
 export default ProjectItem;
