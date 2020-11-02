@@ -17,16 +17,16 @@ const About = () => {
         <TechStack>
             <Title>Skills</Title>
             <TechWrapper>
-                <Pill title="JavaScript" mastery={99} />
-                <Pill title="C#" mastery={90} />
-                <Pill title="React" mastery={90} />
-                <Pill title="Angular" mastery={90} />
-                <Pill title="NodeJs" mastery={90} />
-                <Pill title="TypeScript" mastery={90} />
-                <Pill title="SQL" mastery={90} />
-                <Pill title="MongoDb" mastery={85} />
-                <Pill title="Java" mastery={40} />
-                <Pill title="Python" mastery={40} />
+                <Pill title="JavaScript" mastery={99} showMastery={true}/>
+                <Pill title="C#" mastery={90} showMastery={true}/>
+                <Pill title="React" mastery={90} showMastery={true}/>
+                <Pill title="Angular" mastery={90} showMastery={true}/>
+                <Pill title="NodeJs" mastery={90} showMastery={true}/>
+                <Pill title="TypeScript" mastery={90} showMastery={true}/>
+                <Pill title="SQL" mastery={90} showMastery={true}/>
+                <Pill title="MongoDb" mastery={85} showMastery={true}/>
+                <Pill title="Java" mastery={40} showMastery={true}/>
+                <Pill title="Python" mastery={40} showMastery={true}/>
             </TechWrapper>
         </TechStack>
     </Wrapper>
@@ -39,12 +39,12 @@ const Wrapper = styled.div`
     flex-direction: column;
 
     @media(min-width: 768px) {
-            margin: 16px 15%;
+        margin: 16px 15%;
         flex-direction: row;
     }
 
     @media(min-width: 1200px) {
-            margin: 16px 25%;
+        margin: 16px 25%;
     }
 `;
 
@@ -75,16 +75,6 @@ const TechWrapper = styled.div`
     flex-wrap: wrap;
     display: flex;
     align-items: center;
-`;
-
-const Tech = styled.span`
-    padding: 4px 8px;
-    margin: 4px;
-    border-radius: 8px;
-    border-radius: 15px;
-    background-color: #24292e;
-    color: orange;
-    text-align: center;
 `;
 
 export default About;

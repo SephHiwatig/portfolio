@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Pill = ({ title, mastery }) => {
+const Pill = ({ title, mastery, showMastery }) => {
     const style = {
         width: mastery + '%',
         height: '100%',
@@ -10,11 +10,11 @@ const Pill = ({ title, mastery }) => {
     }
     return <SpanPill>
         {title}
-        <ToolTip>
+        {showMastery && <ToolTip>
             <Tip />
             Mastery
             <Bar><div style={style}></div></Bar>
-        </ToolTip>
+        </ToolTip>}
     </SpanPill>;
 };
 
