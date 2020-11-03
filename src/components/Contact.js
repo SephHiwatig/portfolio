@@ -63,6 +63,7 @@ const ContactForm = styled.form`
         width: 100%;
         padding: .375rem .75rem;
         font-size: 1rem;
+        font-family: inherit !important;
         line-height: 1.5;
         background-color: #fff;
         border: 1px solid #ced4da;
