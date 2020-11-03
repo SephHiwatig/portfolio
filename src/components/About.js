@@ -4,6 +4,7 @@ import Pill from './extras/Pill';
 
 const About = () => {
     return <Wrapper id="about">
+        <Content>
         <InfoWrapper>
             <Title>About me</Title>
             <p>&nbsp;&nbsp;&nbsp;&nbsp; Ever since I was a kid, I have always been fond of puzzles and brain teasers.
@@ -28,25 +29,39 @@ const About = () => {
                 <Pill title="Python"/>
             </TechWrapper>
         </TechStack>
+        </Content>
     </Wrapper>
 };
 
 const Wrapper = styled.div`
     margin: 16px 2%;
     color: #525e65;
-    display: flex;
-    flex-direction: column;
     scroll-margin-top: 60px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
 
     @media(min-width: 768px) {
         margin: 16px 15%;
-        flex-direction: row;
     }
 
     @media(min-width: 1200px) {
         margin: 16px 25%;
     }
+
 `;
+
+const Content = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media(min-width: 768px) {
+        flex-direction: row;
+    }
+`;
+
+
 
 const Title = styled.h2`
     position: relative;
