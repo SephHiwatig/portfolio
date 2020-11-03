@@ -1,22 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from './extras/Button';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+
+    function sendEmail(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm('gmail', 'template_wxz7nt5', e.target, 'user_fRqnfGysVH7dHYBJ2Dfs0')
+          .then((result) => {
+            //   console.log(result.text);
+          }, (error) => {
+            //   console.log(error.text);
+          });
+        
+        e.target.reset();
+    }
+
+
     return <Wrapper>
         <Title>Contact me</Title>
-        <ContactForm>
+        <ContactForm onSubmit={sendEmail}>
             <InputWrapper>
-                <input type="text" placeholder="How can I reach you? i.e email"></input>
+                <input type="text" placeholder="Email" name="name"></input>
             </InputWrapper>
             <InputWrapper>
-                <input type="text" placeholder="Subject"></input>
+                <input type="text" placeholder="Subject" name="subject"></input>
             </InputWrapper>
             <InputWrapper>
-                <textarea rows="3" placeholder="Your message"/>
+                <textarea rows="3" placeholder="Message" name="message"/>
             </InputWrapper>
             <InputWrapper>
-                <Button label="Send message" />
+                <Button label="Send message" type="submit"/>
             </InputWrapper>
         </ContactForm>
     </Wrapper>

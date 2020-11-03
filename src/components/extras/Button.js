@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = ({ label, click }) => {
-    return <CustomButton type="button" onClick={click}>{label}</CustomButton>
+const Button = ({ label, click, type }) => {
+    return <CustomButton type={type} onClick={click}>{label}</CustomButton>
 };
 
 const CustomButton = styled.button`

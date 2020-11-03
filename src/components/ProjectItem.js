@@ -22,7 +22,10 @@ const ProjectItem = ({imgSource, stack, difficulties, solutions, title, descript
                 <Description>
                 <p>{description}</p>
                 </Description>
-                <InfoFooter><Button label="View Project"/><Button label="Github" click={() => { console.log(gitHub); window.open(gitHub) }}/></InfoFooter>
+                <InfoFooter>
+                    <Button label="View Project" type="button"/>
+                    <Button label="Github" click={() => { console.log(gitHub); window.open(gitHub) }} type="button"/>
+                </InfoFooter>
             </InfoWrapper>
         </Row>
         <Row style={border}>
