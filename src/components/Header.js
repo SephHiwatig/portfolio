@@ -32,6 +32,7 @@ const Wrapper = styled.div`
     color: #ddd;
     position: relative;
     flex-direction: column;
+    min-height: 100vh;
     
     & h1 {
         overflow: hidden;
@@ -46,6 +47,7 @@ const Wrapper = styled.div`
 
     @media(min-width: 768px) {
         flex-direction: row;
+        margin-top: -70px;
     }
 `;
 
@@ -61,8 +63,13 @@ const InfoWrapper = styled.div`
     }
 
     @media(min-width: 768px) {
-        max-width: 300px;
+        max-width: 600px;
         text-align: left;
+
+        & h1 {
+            font-size: 4em;
+            max-width: 600px;
+        }
     }
 `;
 
@@ -70,6 +77,7 @@ const ImgWrapper = styled.div`
     display: flex;
     padding: 0 16px;
     justify-content: center;
+    align-items: center;
 
     & img {
         width: 200px;
