@@ -9,12 +9,13 @@ const Projects = () => {
 
     const bugsifyStack = ["React", "NodeJs", "Express", "MongoDb", "Draft.js", "Ace.js"];
     const bugsifyDescription = "Algorithm questions in JavaScript. Provides users with a web based code editor and a console.";
-    const bugsifyDifficulties = ["Authentication", "Code written by the user needs to be tested on the backend and may crash the server",
+    const bugsifyDifficulties = ["The application required authentication as well as authorization depending on user's role", "Code written by the user needs to be tested on the backend and may crash the server",
         "Repeated MongoDb connections not DRY",
         `Tests for each problem is entered through an Admin Panel. Storing test's arguments and outputs
         was very tricky for each function can have multiple complicated arguments (Arrays, matrix) and types
         needs to be specified`, "Questions needs to be stored with a certain format to be displayed on the client nicely"];
-    const bugsifySolutions = ["JWT token authentication", `I applied code insertion into the user's code by 
+    const bugsifySolutions = [`I chose JWT token authentication to secure my application. Since I have an admin user on this application, token easily allowed me to secure each
+        backend endpoint by role`, `I applied code insertion into the user's code by 
         transforming it into Abstract Syntax Tree to prevent it from crashing the server i.e Infinite loops.`,
         `A centralized file that handles all logic relating to MongoDb connection.
         I also took advantage of JavaScript's closure and currying to create a custom MongoDb API for basic CRUD operations.`,
@@ -35,7 +36,7 @@ const Projects = () => {
     const algoVisGitHub = "https://github.com/SephHiwatig/AlgoVisualizer";
 
     const ticketStack = ["Angular", ".NET Core", "Entity Framework", "MySql", "OOP Design Patterns"];
-    const ticketDescription = `Bug tracking software for a team of developers.`;
+    const ticketDescription = `Bug tracking software for a team of developers. I needed a bug tracking application for my projects so I created my own.`;
     const ticketrDifficulties = ["Multiple forms for manipulating a ticket", "Separate library for Data Access Layer" ,"Database Versions/Migrations", "Database data integrity"];
     const ticketSolutions = ["I used Angular's reactive forms to validate each complicated form of a ticket.",
         "I used Entity Framework Code First approach to manage my Data Access layer and keep track of database migrations.",
