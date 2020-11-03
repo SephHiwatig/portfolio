@@ -56,8 +56,8 @@ const Wrapper = styled.div`
 
     &:hover {
         box-shadow: 0 7px 20px 0 rgba(200,200,200,0.2), 0 4px 10px 0 rgba(200,200,200,0.2);
-        transform: scale(1.02);
-        transition: transform .3s;
+        // transform: scale(1.02);
+        transition: box-shadow .3s;
     }
 `;
 

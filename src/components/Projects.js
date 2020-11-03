@@ -9,11 +9,13 @@ const Projects = () => {
 
     const bugsifyStack = ["React", "Redux", "NodeJs", "Express", "MongoDb", "Draft.js", "Ace.js"];
     const bugsifyDescription = "Algorithm questions in JavaScript. Provides users with a web based code editor and a console.";
-    const bugsifyDifficulties = ["The application required authentication as well as authorization depending on user's role", "Code written by the user needs to be tested on the backend and may crash the server",
+    const bugsifyDifficulties = ["The application required authentication as well as authorization depending on user's role", 
+        "Code written by the user needs to be tested on the backend and may crash the server",
         "Repeated MongoDb connections not DRY",
         `Tests for each problem is entered through an Admin Panel. Storing test's arguments and outputs
         was very tricky for each function can have multiple complicated arguments (Arrays, matrix) and types
-        needs to be specified`, "Questions needs to be stored with a certain format to be displayed on the client nicely"];
+        needs to be specified`,
+        "Questions needs to be stored with a certain format to be displayed on the client nicely"];
     const bugsifySolutions = [`I chose JWT token authentication to secure my application. Since I have an admin user on this application, token easily allowed me to secure each
         backend endpoint by role`, `I applied code insertion into the user's code by 
         transforming it into Abstract Syntax Tree to prevent it from crashing the server i.e Infinite loops.`,
