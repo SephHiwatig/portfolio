@@ -19,7 +19,7 @@ const Header = () => {
             <p>Full Stack Web Developer. I love building awesome projects and learning new things along the way.</p>
         </InfoWrapper>
         <ImgWrapper>
-            <img src={me} alt="photo" />
+            <img src={me} />
         </ImgWrapper>
     </Wrapper>
 };

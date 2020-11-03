@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from './extras/Button';
 import Pill from './extras/Pill';
 
 const About = () => {

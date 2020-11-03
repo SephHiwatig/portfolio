@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { AiFillLinkedin, AiOutlineGithub, AiOutlineMenu } from "react-icons/ai";
+import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 
 const Navbar = () => {
 
