@@ -53,7 +53,7 @@ const InfoWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left;
+    text-align: center;
     padding: 0 16px;
 
     & h1 {
@@ -62,6 +62,7 @@ const InfoWrapper = styled.div`
 
     @media(min-width: 768px) {
         max-width: 300px;
+        text-align: left;
     }
 `;
 

@@ -130,17 +130,19 @@ const ProjectImg = styled.img`
 `;
 
 const ListTitle = styled.h4`
-    margin: 0;
+    margin: 0 0 0 8px;
 `;
 
 const CustomList = styled.ul`
     margin-top: 0;
     list-style: none;
+    text-align: justify;
+
 
     & li::before {
         content: "•"; color: orange;
         display: inline-block; width: 1em;
-        margin-left: -1em
+        margin-left: -1em;
     }
 `;
 
