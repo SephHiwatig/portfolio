@@ -21,7 +21,7 @@ const Projects = () => {
         transforming it into Abstract Syntax Tree to prevent it from crashing the server i.e Infinite loops.`,
         `A centralized file that handles all logic relating to MongoDb connection.
         I also took advantage of JavaScript's closure and currying to create a custom MongoDb API for basic CRUD operations.`,
-        `I stored the test's arguments and outputs as a long string with their types. During the test, I parse them back to their proper types using a recursive function then I pass the arguments
+        `I stored the test's arguments and outputs as a long string with their types. During the test, I parse them back to their proper types using a recursive function then I pass the results
         to the user's solution and compare the output. Recursive approach is neccesary to parse nested arrays. This was really fun as it felt like
         I'm playing Bugsify while building it`, "I used Draft.js to format, store and display the questions."];
     const bugsifyGitHub = "https://github.com/SephHiwatig/Bugsify";
