@@ -7,7 +7,7 @@ import TicketImage from '../assets/ticket.PNG';
 
 const Projects = () => {
 
-    const bugsifyStack = ["React", "NodeJs", "Express", "MongoDb", "Draft.js", "Ace.js"];
+    const bugsifyStack = ["React", "Redux", "NodeJs", "Express", "MongoDb", "Draft.js", "Ace.js"];
     const bugsifyDescription = "Algorithm questions in JavaScript. Provides users with a web based code editor and a console.";
     const bugsifyDifficulties = ["The application required authentication as well as authorization depending on user's role", "Code written by the user needs to be tested on the backend and may crash the server",
         "Repeated MongoDb connections not DRY",
