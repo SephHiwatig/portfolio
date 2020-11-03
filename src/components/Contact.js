@@ -23,7 +23,7 @@ const Contact = () => {
         <Title>Contact me</Title>
         <ContactForm onSubmit={sendEmail}>
             <InputWrapper>
-                <input type="text" placeholder="Email" name="name"></input>
+                <input type="text" placeholder="Your email" name="name"></input>
             </InputWrapper>
             <InputWrapper>
                 <input type="text" placeholder="Subject" name="subject"></input>

@@ -50,7 +50,7 @@ const ProjectItem = ({imgSource, stack, difficulties, solutions, title, descript
 };
 
 const Wrapper = styled.div`
-    margin: 8px 0;
+    margin: 16px 0;
     box-shadow: 0 7px 20px 0 rgba(0,0,0,0.2), 0 4px 10px 0 rgba(0,0,0,0.2);
     padding: 16px;
 

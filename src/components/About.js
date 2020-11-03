@@ -16,16 +16,16 @@ const About = () => {
         <TechStack>
             <Title>Skills</Title>
             <TechWrapper>
-                <Pill title="JavaScript" mastery={99} showMastery={true}/>
-                <Pill title="C#" mastery={90} showMastery={true}/>
-                <Pill title="React" mastery={90} showMastery={true}/>
-                <Pill title="Angular" mastery={90} showMastery={true}/>
-                <Pill title="NodeJs" mastery={90} showMastery={true}/>
-                <Pill title="TypeScript" mastery={90} showMastery={true}/>
-                <Pill title="SQL" mastery={90} showMastery={true}/>
-                <Pill title="MongoDb" mastery={85} showMastery={true}/>
-                <Pill title="Java" mastery={40} showMastery={true}/>
-                <Pill title="Python" mastery={40} showMastery={true}/>
+                <Pill title="JavaScript"/>
+                <Pill title="C#"/>
+                <Pill title="React"/>
+                <Pill title="Angular"/>
+                <Pill title="NodeJs"/>
+                <Pill title="TypeScript"/>
+                <Pill title="SQL"/>
+                <Pill title="MongoDb"/>
+                <Pill title="Java"/>
+                <Pill title="Python"/>
             </TechWrapper>
         </TechStack>
     </Wrapper>
