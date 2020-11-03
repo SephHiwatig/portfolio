@@ -9,25 +9,34 @@ const Projects = () => {
 
     const bugsifyStack = ["React", "NodeJs", "Express", "MongoDb", "Draft.js", "Ace.js"];
     const bugsifyDescription = "Algorithm questions in JavaScript. Provides users with a web based code editor and a console.";
-    const bugsifyDifficulties = ["Authentication", "Code written by the user needs to be tested on the backend",
-     "Questions needs to be stored with a certain format to be displayed on the client nicely", "Multiple connections to MongoDb"];
+    const bugsifyDifficulties = ["Authentication", "Code written by the user needs to be tested on the backend and may crash the server",
+        "Repeated MongoDb connections not DRY",
+        `Tests for each problem is entered through an Admin Panel. Storing test's arguments and outputs
+        was very tricky for each function can have multiple complicated arguments (Arrays, matrix) and types
+        needs to be specified`, "Questions needs to be stored with a certain format to be displayed on the client nicely"];
     const bugsifySolutions = ["JWT token authentication", `I applied code insertion into the user's code by 
         transforming it into Abstract Syntax Tree to prevent it from crashing the server i.e Infinite loops.`,
-        "I used Draft.js to format, store and display the questions.", `A centralized file that handles all logic relating to MongoDb connection.
-        I also took advantage of JavaScript's closure and currying to create a custom MongoDb API for basic CRUD operations.`];
+        `A centralized file that handles all logic relating to MongoDb connection.
+        I also took advantage of JavaScript's closure and currying to create a custom MongoDb API for basic CRUD operations.`,
+        `I stored the arguments and outputs as a long string with their types and wrote a function to be called before testing that parses it 
+        to get an array of arguments and the output. I used recursion to handle nested array. This was really fun as it felt like
+        I'm playing Bugsify while building it`, "I used Draft.js to format, store and display the questions."];
     const bugsifyGitHub = "https://github.com/SephHiwatig/Bugsify";
 
     const algoVisStack = ["Angular", "TypeScript", "Data Structures", "Algorithms"];
     const algoVisDescription = `Visualizes the following algorithms: Selection Sort, Bubble Sort, Insertion Sort,
         Quick Sort, Linear Search, Binary Search, Jump Search, Dijkstra and A* path finding algorithm.`;
-    const algoVisDifficulties = ["Learning the algorithms", "Animating the algorithms"];
+    const algoVisDifficulties = [`Learning the algorithms. Fun fact: At my work, there was a macro written around 15 years ago and still being used today.
+        This macro generates a view but now takes around 33 seconds to load. My manager asked me to check if the databases is indexed properly or
+        maybe a binary data is being retrieved from the database causing the slow response. I instead scan the code before going to the database and replaced
+        a brute force sorting code block with Quick Sort. The macro now loads instantly`, "Animating the algorithms"];
     const algoVIsSolutions = ["I took time to learn the algorithms before starting the project. Resources like geeksforgeeks.org helped a lot.",
         "I replaced most of the loops of the algorithms with setInterval to delay the execution of each step while manipulating the dom elements."];
     const algoVisGitHub = "https://github.com/SephHiwatig/AlgoVisualizer";
 
     const ticketStack = ["Angular", ".NET Core", "Entity Framework", "MySql", "OOP Design Patterns"];
     const ticketDescription = `Bug tracking software for a team of developers.`;
-    const ticketrDifficulties = ["Multiple forms for manipulating a ticket", "Data Access Layer" ,"Database Versions/Migrations", "Database data integrity"];
+    const ticketrDifficulties = ["Multiple forms for manipulating a ticket", "Separate library for Data Access Layer" ,"Database Versions/Migrations", "Database data integrity"];
     const ticketSolutions = ["I used Angular's reactive forms to validate each complicated form of a ticket.",
         "I used Entity Framework Code First approach to manage my Data Access layer and keep track of database migrations.",
         "To keep the data consistent, I applied a combination of Unit of Work and Repository Design Patterns on my Data Access Layer.", 
