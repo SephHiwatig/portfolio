@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Pill from './extras/Pill';
 
 const About = () => {
-    return <Wrapper>
+    return <Wrapper id="about">
         <InfoWrapper>
             <Title>About me</Title>
             <p>&nbsp;&nbsp;&nbsp;&nbsp; Ever since I was a kid, I have always been fond of puzzles and brain teasers.
@@ -36,6 +36,7 @@ const Wrapper = styled.div`
     color: #525e65;
     display: flex;
     flex-direction: column;
+    scroll-margin-top: 60px;
 
     @media(min-width: 768px) {
         margin: 16px 15%;

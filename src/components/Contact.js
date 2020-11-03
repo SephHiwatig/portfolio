@@ -19,7 +19,7 @@ const Contact = () => {
     }
 
 
-    return <Wrapper>
+    return <Wrapper id="contact">
         <Title>Contact me</Title>
         <ContactForm onSubmit={sendEmail}>
             <InputWrapper>

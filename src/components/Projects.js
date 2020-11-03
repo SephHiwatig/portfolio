@@ -34,7 +34,7 @@ const Projects = () => {
         "I also used Decorator design pattern to add paging properties on .NET Core's List class. This helps me page the tickets on the Front-end."];
     const ticketGitHub = "https://github.com/SephHiwatig/TicketingSystem";
 
-    return <Wrapper>
+    return <Wrapper id="projects">
         <Content>
             <Title>Projects</Title>
             <ProjectItem imgSource={BugsifyImage} 
@@ -67,6 +67,7 @@ export default Projects;
 const Wrapper = styled.div`
     background-color: #525e65;
     color: #ddd;
+    scroll-margin-top: 50px;
 `;
 
 const Content = styled.div`

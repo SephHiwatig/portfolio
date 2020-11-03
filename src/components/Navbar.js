@@ -7,10 +7,13 @@ const Navbar = () => {
     return <Wrapper>
         <Menu>
             <li>
-                <AnimatedLink href="#" >Projects</AnimatedLink>
+                <AnimatedLink href="#projects" >Projects</AnimatedLink>
             </li>
             <li>
-                <AnimatedLink href="#" >About</AnimatedLink>
+                <AnimatedLink href="#about" >About</AnimatedLink>
+            </li>
+            <li>
+                <AnimatedLink href="#contact" >Contact</AnimatedLink>
             </li>
         </Menu>
         <IconsWrapper>
