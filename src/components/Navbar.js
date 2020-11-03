@@ -23,7 +23,7 @@ const Navbar = () => {
                 </IconLink>
             </span>
             <span>
-                <IconLink href="#">
+                <IconLink href="https://github.com/SephHiwatig" target="_blank">
                     <AiOutlineGithub />
                 </IconLink>
             </span>
