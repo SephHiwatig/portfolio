@@ -23,7 +23,7 @@ const ProjectItem = ({imgSource, stack, difficulties, solutions, title, descript
                 <p>{description}</p>
                 </Description>
                 <InfoFooter>
-                    <Button label="View Project" type="button"/>
+                    <Button label="Live demo" type="button"/>
                     <Button label="Github" click={() => { console.log(gitHub); window.open(gitHub) }} type="button"/>
                 </InfoFooter>
             </InfoWrapper>
