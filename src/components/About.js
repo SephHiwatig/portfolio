@@ -10,7 +10,7 @@ const About = () => {
             <p>&nbsp;&nbsp;&nbsp;&nbsp; Ever since I was a kid, I have always been fond of puzzles and brain teasers.
             I often find myself getting lost in time when thinking about solving a problem and not stopping until it is solved.
             I really enjoy the process and the feeling of fulfillment after finding a solution. It was only a matter of time for me
-            to come accross Programming and Software Development. It was a complete love at first "Hello World!" and it just keeps getting better!
+            to come across Programming and Software Development. It was a complete love at first "Hello World!" and it just keeps getting better!
             </p>
             {/* <Button label="Read more"></Button> */}
         </InfoWrapper>
