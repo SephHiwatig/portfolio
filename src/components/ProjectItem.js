@@ -3,56 +3,65 @@ import styled from 'styled-components';
 import Button from './extras/Button';
 import Pill from './extras/Pill';
 
-const ProjectItem = ({imgSource, stack, difficulties, solutions, title, description, gitHub}) => {
+const ProjectItem = ({ imgSource, stack, difficulties, solutions, title, description, gitHub }) => {
     const border = {
         borderTop: "1px solid #aaa"
     }
     return <Wrapper>
-        <Row>
-            <ImageWrapper>
-                <ProjectImg src={imgSource} />
-            </ImageWrapper>
-            <InfoWrapper>
-                <ProjectTitle>{title}</ProjectTitle>
-                <TechWrapper>
-                    {stack.map(item => {
-                        return <Pill title={item} key={item} />
-                    })}
-                </TechWrapper>
-                <Description>
-                <p>{description}</p>
-                </Description>
-                <InfoFooter>
-                    <Button label="Live demo" type="button"/>
-                    <Button label="Github" click={() => { console.log(gitHub); window.open(gitHub) }} type="button"/>
-                </InfoFooter>
-            </InfoWrapper>
-        </Row>
-        <Row style={border}>
-            <Difficulties>
-                <ListTitle>Difficulties</ListTitle>
-                <CustomList>
-                    {difficulties.map(item => {
-                        return <li key={item}>{item}</li>
-                    })}
-                </CustomList>
-            </Difficulties>
-            <Solutions>
-            <ListTitle>Solutions</ListTitle>
-                <CustomList>
-                    {solutions.map(item => {
-                        return <li key={item}>{item}</li>
-                    })}
-                </CustomList>
-            </Solutions>
-        </Row>
+        <Content className={title}>
+            <Row>
+                <ImageWrapper>
+                    <ProjectImg src={imgSource} />
+                </ImageWrapper>
+                <InfoWrapper>
+                    <ProjectTitle>{title}</ProjectTitle>
+                    <TechWrapper>
+                        {stack.map(item => {
+                            return <Pill title={item} key={item} />
+                        })}
+                    </TechWrapper>
+                    <Description>
+                        <p>{description}</p>
+                    </Description>
+                    <InfoFooter>
+                        <Button label="Live demo" type="button" />
+                        <Button label="Github" click={() => { console.log(gitHub); window.open(gitHub) }} type="button" />
+                    </InfoFooter>
+                </InfoWrapper>
+            </Row>
+            <Row style={border}>
+                <Difficulties>
+                    <ListTitle>Difficulties</ListTitle>
+                    <CustomList>
+                        {difficulties.map(item => {
+                            return <li key={item}>{item}</li>
+                        })}
+                    </CustomList>
+                </Difficulties>
+                <Solutions>
+                    <ListTitle>Solutions</ListTitle>
+                    <CustomList>
+                        {solutions.map(item => {
+                            return <li key={item}>{item}</li>
+                        })}
+                    </CustomList>
+                </Solutions>
+            </Row>
+        </Content>
     </Wrapper>
 };
 
 const Wrapper = styled.div`
+    position: relative;
+`;
+
+const Content = styled.div`
     margin: 16px 0;
     box-shadow: 0 7px 20px 0 rgba(0,0,0,0.2), 0 4px 10px 0 rgba(0,0,0,0.2);
     padding: 16px;
+    position: relative;
+    top: 200px;
+    transition: all 1s;
 
     &:hover {
         box-shadow: 0 7px 20px 0 rgba(200,200,200,0.2), 0 4px 10px 0 rgba(200,200,200,0.2);

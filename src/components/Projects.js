@@ -4,12 +4,13 @@ import ProjectItem from './ProjectItem';
 import BugsifyImage from '../assets/Bugsify_home.PNG';
 import AlgoVisImage from '../assets/algo_vis.PNG';
 import TicketImage from '../assets/ticket.PNG';
+import './css/ProjectAnimation.css'
 
 const Projects = () => {
 
     const bugsifyStack = ["React", "Redux", "NodeJs", "Express", "MongoDb", "Draft.js", "Ace.js"];
     const bugsifyDescription = "Algorithm questions in JavaScript. Provides users with a web based code editor and a console.";
-    const bugsifyDifficulties = ["The application required authentication as well as authorization depending on user's role", 
+    const bugsifyDifficulties = ["The application required authentication as well as authorization depending on user's role",
         "Code written by the user needs to be tested on the backend and may crash the server",
         "Repeated MongoDb connections not DRY",
         `Tests for each problem is entered through an Admin Panel. Storing test's arguments and outputs
@@ -39,32 +40,59 @@ const Projects = () => {
 
     const ticketStack = ["Angular", ".NET Core", "Entity Framework", "MySql", "OOP Design Patterns"];
     const ticketDescription = `Bug tracking software for a team of developers. I needed a bug tracking application for my projects so I created my own.`;
-    const ticketrDifficulties = ["Multiple forms for manipulating a ticket", "Separate library for Data Access Layer" ,"Database Versions/Migrations", "Database data integrity"];
+    const ticketrDifficulties = ["Multiple forms for manipulating a ticket", "Separate library for Data Access Layer", "Database Versions/Migrations", "Database data integrity"];
     const ticketSolutions = ["I used Angular's reactive forms to validate each complicated form of a ticket.",
         "I used Entity Framework Code First approach to manage my Data Access layer and keep track of database migrations.",
-        "To keep the data consistent, I applied a combination of Unit of Work and Repository Design Patterns on my Data Access Layer.", 
+        "To keep the data consistent, I applied a combination of Unit of Work and Repository Design Patterns on my Data Access Layer.",
         "I also used Decorator design pattern to add paging properties on .NET Core's List class. This helps me page the tickets on the Front-end."];
     const ticketGitHub = "https://github.com/SephHiwatig/TicketingSystem";
+
+    window.addEventListener('scroll', () => {
+        const windowHeight = window.innerHeight;
+
+        const bugsifyEl = document.querySelector('.Bugsify');
+        const bugsifyTop = bugsifyEl.getBoundingClientRect().top;
+        console.log(bugsifyTop, windowHeight);
+        if (bugsifyTop < windowHeight) {
+            if (!bugsifyEl.classList.contains('slide-up'))
+                bugsifyEl.classList.add('slide-up');
+        }
+
+        const algoEl = document.querySelector('.AlgoVisualizer');
+        const algoTop = algoEl.getBoundingClientRect().top;
+        if (algoTop < windowHeight) {
+            if (!algoEl.classList.contains('slide-up'))
+                algoEl.classList.add('slide-up');
+        }
+
+        const ticketEl = document.querySelector('.Ticketr');
+        const ticketTop = ticketEl.getBoundingClientRect().top;
+
+        if (ticketTop < windowHeight) {
+            if (!ticketEl.classList.contains('slide-up'))
+                ticketEl.classList.add('slide-up');
+        }
+    });
 
     return <Wrapper id="projects">
         <Content>
             <Title>Projects</Title>
-            <ProjectItem imgSource={BugsifyImage} 
-                title="Bugsify" 
+            <ProjectItem imgSource={BugsifyImage}
+                title="Bugsify"
                 stack={bugsifyStack}
                 description={bugsifyDescription}
                 difficulties={bugsifyDifficulties}
                 solutions={bugsifySolutions}
                 gitHub={bugsifyGitHub}></ProjectItem>
-            <ProjectItem imgSource={AlgoVisImage} 
-                title="AlgoVisualizer" 
+            <ProjectItem imgSource={AlgoVisImage}
+                title="AlgoVisualizer"
                 stack={algoVisStack}
                 description={algoVisDescription}
                 difficulties={algoVisDifficulties}
                 solutions={algoVIsSolutions}
                 gitHub={algoVisGitHub}></ProjectItem>
-            <ProjectItem imgSource={TicketImage} 
-                title="Ticketr" 
+            <ProjectItem imgSource={TicketImage}
+                title="Ticketr"
                 stack={ticketStack}
                 description={ticketDescription}
                 difficulties={ticketrDifficulties}
