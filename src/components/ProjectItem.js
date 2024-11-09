@@ -3,10 +3,13 @@ import styled from 'styled-components';
 import Button from './extras/Button';
 import Pill from './extras/Pill';
 
-const ProjectItem = ({ imgSource, stack, difficulties, solutions, title, description, gitHub }) => {
+const ProjectItem = ({ imgSource, stack, difficulties, solutions, title, url, description, gitHub }) => {
     const border = {
         borderTop: "1px solid #aaa"
     }
+
+
+
     return <Wrapper>
         <Content className={title}>
             <Row>
@@ -24,8 +27,8 @@ const ProjectItem = ({ imgSource, stack, difficulties, solutions, title, descrip
                         <p>{description}</p>
                     </Description>
                     <InfoFooter>
-                        {/* <Button label="Live demo" type="button" /> */}
-                        <Button label="Github" click={() => { console.log(gitHub); window.open(gitHub) }} type="button" />
+                        { url && <Button label="Live demo" click={() => window.open(url) } type="button" /> }
+                        <Button label="Github" click={() => window.open(gitHub) } type="button" />
                     </InfoFooter>
                 </InfoWrapper>
             </Row>
@@ -118,6 +121,13 @@ const Description = styled.div`
 const ProjectTitle = styled.h3`
     margin: 0 0 0 8px;
     color: orange;
+`;
+
+const ProjectUrl = styled.a`
+    margin: 0 0 0 8px;
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
 `;
 
 const Difficulties = styled.div`

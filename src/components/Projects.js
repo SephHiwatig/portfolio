@@ -86,6 +86,7 @@ const Projects = () => {
                 gitHub={bugsifyGitHub}></ProjectItem>
             <ProjectItem imgSource={AlgoVisImage}
                 title="AlgoVisualizer"
+                url="https://algovisualizerprod-cvg7h0gabqbkephq.canadaeast-01.azurewebsites.net"
                 stack={algoVisStack}
                 description={algoVisDescription}
                 difficulties={algoVisDifficulties}
